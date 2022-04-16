@@ -1,0 +1,36 @@
+{
+  "name": "flrt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.ts",
+    "start": "node server.js",
+    "dbp": "npx prisma db push && yarn pg",
+    "pg": "npx prisma generate",
+    "seed": "npx prisma db seed && yarn dbp"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^3.12.0",
+    "apollo-server": "^3.6.7",
+    "argon2": "^0.28.5",
+    "dotenv": "^16.0.0",
+    "graphql": "^16.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/node": "^17.0.24",
+    "nodemon": "^2.0.15",
+    "prisma": "^3.12.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  }
+}
